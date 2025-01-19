@@ -1,0 +1,43 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    body {
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .flip-card {
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      backface-visibility: hidden;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+    }
+
+    .terminal {
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 255, 0, 0.1),
+        rgba(0, 255, 0, 0.1) 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
